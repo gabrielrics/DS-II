@@ -28,6 +28,7 @@ public class Conexao {
             System.out.println("Conexão Aberta");
             
             
+            //É referente ao envio do banco de dados, sendo de exceção e não encontradas
         } catch(SQLException e){
             System.out.println(e.getMessage());
         } catch (ClassNotFoundException e){
@@ -39,6 +40,7 @@ public class Conexao {
         return con;
     }
     
+    //serve para fechar uma conexão com o banco de dados
     public static void fecharConexao(Connection con) {
         try{
             con.close();
